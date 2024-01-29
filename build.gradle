@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id "com.adarshr.test-logger" version "3.0.0"
-    id 'com.github.johnrengelman.shadow' version '5.2.0'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
     id 'jacoco'
     id 'checkstyle'
 }
@@ -21,8 +21,8 @@ dependencies {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 checkstyle {
