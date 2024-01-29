@@ -1,0 +1,16 @@
+{
+    "entities": [
+      {
+        "x": 4,
+        "y": 2,
+        "type": "player"
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "type": "swamp_tile",
+        "movement_factor": 2
+      }
+    ],
+    "goal-condition": {"goal": "enemies"}
+  }

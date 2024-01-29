@@ -1,0 +1,31 @@
+{
+    "entities": [
+      {
+        "x": 4,
+        "y": 2,
+        "type": "player"
+      },
+      {
+        "x": 5,
+        "y": 2,
+        "type": "treasure"
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "type": "swamp_tile",
+        "movement_factor": 2
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "type": "wall"
+      },
+      {
+        "x": 4,
+        "y": 5,
+        "type": "assassin"
+      }
+    ],
+    "goal-condition": {"goal": "enemies"}
+  }

@@ -1,0 +1,36 @@
+{
+    "entities": [
+      {
+        "x": 4,
+        "y": 2,
+        "type": "player"
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "type": "treasure"
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "type": "swamp_tile",
+        "movement_factor": 2
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "type": "hydra"
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "type": "wall"
+      },
+      {
+        "x": 4,
+        "y": 5,
+        "type": "mercenary"
+      }
+    ],
+    "goal-condition": {"goal": "enemies"}
+  }
