@@ -1,5 +1,6 @@
 # Dungeonmania
 
+## Get Started
 You can start the program locally here:
 src\main\java\App.java
 1. Install the Java extention package in Vscode marketplace. 
