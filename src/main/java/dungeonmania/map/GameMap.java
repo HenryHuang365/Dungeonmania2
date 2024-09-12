@@ -109,6 +109,7 @@ public class GameMap {
         triggerOverlapEvent(entity);
     }
 
+    @SuppressWarnings("removal")
     public void moveTo(Entity entity, Direction direction) {
         if (!canMoveTo(entity, Position.translateBy(entity.getPosition(), direction))) return;
         triggerMovingAwayEvent(entity);

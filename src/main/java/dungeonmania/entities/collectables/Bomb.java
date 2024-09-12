@@ -77,6 +77,7 @@ public class Bomb extends CollectableEntity implements InventoryItem {
     }
     */
 
+    @SuppressWarnings("removal")
     public void onPutDown(GameMap map, Position p) {
         translate(Position.calculatePositionBetween(getPosition(), p));
         map.addEntity(this);

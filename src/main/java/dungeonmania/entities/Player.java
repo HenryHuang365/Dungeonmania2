@@ -33,7 +33,7 @@ public class Player extends OverlapReactEntity implements Battleable {
     private int nextTrigger = 0;
     //private Position previousPosition;
     private PlayerState state;
-    private double health;
+    // private double health;
     private double attack;
     private double defence;
 
@@ -65,7 +65,7 @@ public class Player extends OverlapReactEntity implements Battleable {
                 true);
         inventory = new Inventory();
         state = new BaseState(this);
-        this.health = health;
+        // this.health = health;
         this.attack = attack;
         // state = new PlayerState(this, false, false);
     }
