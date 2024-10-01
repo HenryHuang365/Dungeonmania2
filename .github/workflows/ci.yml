@@ -1,0 +1,53 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    container:
+      image: sneakypatriki/cs2511-gradle:latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: '17'
+      
+      - name: Lint the code (Checkstyle)
+        run: |
+          ./gradlew checkstyleMain
+          ./gradlew checkstyleTest
+        continue-on-error: true  # Similar to 'allow_failure'
+
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: sneakypatriki/cs2511-gradle:latest
+    needs: lint
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: '17'
+      
+      - name: Run tests
+        run: ./gradlew test
+
+       - name: Extract and check coverage
+        run: |
+          chmod +x extract_coverage.sh
+          ./extract_coverage.sh
