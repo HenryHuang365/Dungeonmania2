@@ -3,10 +3,10 @@ name: Java CI
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   lint:
@@ -47,7 +47,7 @@ jobs:
       - name: Run tests
         run: ./gradlew test
 
-       - name: Extract and check coverage
+      - name: Extract and check coverage
         run: |
           chmod +x extract_coverage.sh
           ./extract_coverage.sh
