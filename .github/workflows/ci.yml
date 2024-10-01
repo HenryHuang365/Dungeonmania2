@@ -25,8 +25,8 @@ jobs:
       
       - name: Lint the code (Checkstyle)
         run: |
-          ./gradlew checkstyleMain
-          ./gradlew checkstyleTest
+          gradle checkstyleMain
+          gradle checkstyleTest
         continue-on-error: true  # Similar to 'allow_failure'
 
   test:
@@ -45,7 +45,7 @@ jobs:
           java-version: '17'
       
       - name: Run tests
-        run: ./gradlew test
+        run: gradle test
 
       - name: Extract and check coverage
         run: |
