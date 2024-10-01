@@ -3,7 +3,6 @@ name: Dungeonmania2 CI
 on:
   push:
     branches:
-      - master
   pull_request:
     branches:
       - master
