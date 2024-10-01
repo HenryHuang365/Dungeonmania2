@@ -11,8 +11,6 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    container:
-      image: sneakypatriki/cs2511-gradle:latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -31,8 +29,6 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    container:
-      image: sneakypatriki/cs2511-gradle:latest
     needs: lint
     steps:
       - name: Checkout code
